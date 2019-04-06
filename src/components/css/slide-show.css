@@ -1,0 +1,91 @@
+.slide_show{
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height: 100%;
+overflow:hidden;
+}
+    .slide{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height: 100%; /* ABF */
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    }
+
+
+/********************************
+        Slides Transitions
+*********************************/
+
+/*Name:slides comes from the transition name property on the CSSTransitionGroup*/
+
+.slide-transition{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease-out;
+}
+
+.opacity .slides-enter-active, .opacity .slides-leave{
+    opacity: 100;
+}
+
+.opacity .slides-leave-active, .opacity .slides-enter{
+    opacity: 0;
+}
+
+.horizontal .slides-enter-active, .horizontal .slides-leave{
+    left:0;
+}
+
+.horizontal .slides-leave-active{
+    left:-100%;
+}
+
+.horizontal .slides-enter{
+    left:100%;
+}
+
+.backward.horizontal .slides-enter-active, .backward.horizontal .slides-leave{
+    left:0;
+}
+
+.backward.horizontal .slides-leave-active{
+    left:100%;
+}
+
+.backward.horizontal .slides-enter{
+    left:-100%;
+}
+
+.vertical .slides-enter-active, .vertical .slides-leave{
+    top:0;
+}
+
+.vertical .slides-leave-active{
+    top:100%;
+}
+
+.vertical .slides-enter{
+    top:-100%;
+}
+
+.backward.vertical .slides-enter-active, .backward.vertical .slides-leave{
+    top:0;
+}
+
+.backward.vertical .slides-leave-active{
+    top:-100%;
+}
+
+.backward.vertical .slides-enter{
+    top:100%;
+}
